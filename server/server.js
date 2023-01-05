@@ -13,7 +13,7 @@ mongoose.set('strictQuery', false);
 
 mongoose.connect(url);
 
-app.use(cors({ origin: "http://45.132.241.86/" }));
+app.use(cors({ origin: "http://45.132.241.86" }));
 app.use(exp.json());
 
 
