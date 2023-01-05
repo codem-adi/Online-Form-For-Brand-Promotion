@@ -1,0 +1,27 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* background-color: black; */
+
+}
+.App {
+  text-align: center;
+}
+.link{
+  padding: 0px;
+}
+.top_bar {
+  height: 70px;
+  background-color: #035642;
+  /* background: linear-gradient(to bottom, #035642 10%, rgba(223, 7, 7, 0) 10%, rgba(0, 0, 0, 0) 100%); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0px;
+}
+
+.top_bar>img{
+  height: 75%;
+}
+

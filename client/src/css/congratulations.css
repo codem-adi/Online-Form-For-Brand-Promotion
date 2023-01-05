@@ -1,0 +1,36 @@
+
+.mainbx>h4{
+     border: none;
+}
+
+
+.code_box>p{
+     margin: 0px;
+}
+
+.code_box>h6{
+     border: 2px solid #035642;
+     margin: 2px 15px 30px 15px;
+     padding: 5px 20px;
+     border-radius: 5px;
+     font-weight: 700;
+     font-size: 18px;
+}
+#main_code{
+     z-index: 1;
+     margin: 20px;
+     cursor: pointer;
+}
+
+#offer_amount{
+     font-size: 45px;
+     margin: 30px 10px;
+     color: red;
+     padding: 10px 20px;
+     border: 5px solid red;
+     border-radius: 20px;
+}
+
+#offer_amount>sup{
+     padding-left: 10px;
+}
