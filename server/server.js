@@ -61,6 +61,9 @@ function getDis(req) {
      return discount
 }
 
+app.get("/api/", (req, resp) => {
+     resp.send(JSON.stringify("SERVER IS RUNNING"));
+})
 
 app.post("/api/discount", (req, resp) => {
      const referal = Math.floor(Math.random() * code.length);
