@@ -91,8 +91,8 @@ app.post("/api/details", async (req, resp) => {
      }
 })
 
-app.listen(8000, function (err) {
-     if (err) console.log(err);
-     console.log("Server listening on PORT", 8000);
-});
+// app.listen(8000, function (err) {
+//      if (err) console.log(err);
+//      console.log("Server listening on PORT", 8000);
+// });
 
