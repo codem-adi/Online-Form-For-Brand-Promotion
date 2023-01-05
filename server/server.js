@@ -13,7 +13,7 @@ mongoose.set('strictQuery', false);
 
 mongoose.connect(url);
 
-app.use(cors({ origin: "http://45.132.241.86/" }));
+app.use(cors({ origin: "http://45.132.241.86" }));
 app.use(exp.json());
 
 
@@ -61,7 +61,7 @@ function getDis(req) {
      return discount
 }
 
-app.get("/api/", (req, resp) => {
+app.get("/api", (req, resp) => {
      resp.send(JSON.stringify("SERVER IS RUNNING"));
 })
 
