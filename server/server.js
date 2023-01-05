@@ -13,7 +13,8 @@ mongoose.set('strictQuery', false);
 
 mongoose.connect(url);
 
-app.use(cors({ origin: "http://45.132.241.86" }));
+app.use(cors({ origin: "http://45.132.241.86/api" }));
+// app.use(cors({ origin: "http://127.0.0.1:8000" }));
 app.use(exp.json());
 
 
@@ -61,18 +62,18 @@ function getDis(req) {
      return discount
 }
 
-app.get("/api", (req, resp) => {
+app.get("/", (req, resp) => {
      resp.send(JSON.stringify("SERVER IS RUNNING"));
 })
 
-app.post("/api/discount", (req, resp) => {
+app.post("/discount", (req, resp) => {
      const referal = Math.floor(Math.random() * code.length);
 
      resp.send(JSON.stringify({ discount: getDis(req), referalCode: code[referal] }));
 
 });
 
-app.post("/api/details", async (req, resp) => {
+app.post("/details", async (req, resp) => {
 
      try {
           const user = new userSchema({
@@ -86,13 +87,14 @@ app.post("/api/details", async (req, resp) => {
           resp.send(JSON.stringify(getDis(req)));
 
           await user.save();
+
      } catch {
           resp.send("something went wrong!! sorry.")
      }
 })
 
-// app.listen(8000, function (err) {
-//      if (err) console.log(err);
-//      console.log("Server listening on PORT", 8000);
-// });
+app.listen(8000, function (err) {
+     if (err) console.log(err);
+     console.log("Server listening on PORT", 8000);
+});
 
