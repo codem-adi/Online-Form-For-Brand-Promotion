@@ -15,7 +15,7 @@ function Form() {
      //sending the data to the server
      function postDetails(data) {
           try {
-               fetch('http://45.132.241.86/details', {
+               fetch('http://45.132.241.86/api/details', {
                     method: 'POST',
                     headers: {
                          'Content-Type': 'application/json',
@@ -24,9 +24,9 @@ function Form() {
                })
                     .then((resp) => { return resp.json() })
                     .then((offer) => {
-                         navigate("/final" ,{ state: { 'message': "Failed to submit form" } });
+                         navigate("/final", { state: { 'message': "Failed to submit form" } });
                          //here we are
-                         
+
                     })
                     .catch((error) => {
                          navigate("/")

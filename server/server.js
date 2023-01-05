@@ -62,14 +62,14 @@ function getDis(req) {
 }
 
 
-app.post("/discount", (req, resp) => {
+app.post("/api/discount", (req, resp) => {
      const referal = Math.floor(Math.random() * code.length);
 
      resp.send(JSON.stringify({ discount: getDis(req), referalCode: code[referal] }));
 
 });
 
-app.post("/details", async (req, resp) => {
+app.post("/api/details", async (req, resp) => {
 
      try {
           const user = new userSchema({

@@ -16,12 +16,12 @@ function Congratulations() {
 
      useEffect(() => {
           getDiscount();
-     },[])
+     }, [])
      const location = useLocation();
      // const { data } = state || {};
-    
+
      let getDiscount = () => {
-          
+
           if (localStorage.getItem("Imarticus_Code")) {
                document.getElementById('main_code').innerText = localStorage.getItem('Imarticus_Code').slice(0, 10);
                document.querySelector("#offer_amount > span").innerText = localStorage.getItem('Imarticus_Code').slice(10);
@@ -30,7 +30,7 @@ function Congratulations() {
           else {
 
                try {
-                    fetch('http://45.132.241.86/discount', {
+                    fetch('http://45.132.241.86/api/discount', {
                          method: 'POST',
                          headers: {
                               'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ function Congratulations() {
                     })
                          .then((response) => response.json())
                          .then((data) => {
-                              
+
                               document.querySelector("#offer_amount > span").innerText = data.discount;
                               localStorage.setItem('Imarticus_Code', data.referalCode + data.discount);
                               // document.querySelector("#main_code").innerText = data.referalCode
@@ -50,7 +50,7 @@ function Congratulations() {
                     localStorage.setItem("Imarticus_auth", "true")
                }
                catch {
-                    
+
                }
                // alert("clicked this end", localStorage.getItem("Imarticus_Code"));
           }
@@ -58,7 +58,7 @@ function Congratulations() {
      }
      return (
           <div className="mainbx">
-               
+
                <h1>Hurry..!</h1>
                <h4>You have sucessfully availd the offer</h4>
                <div className="code_box">
@@ -68,7 +68,7 @@ function Congratulations() {
 
                </div>
                <h5>You will hear from us soon</h5>
-               
+
           </div>
      )
 
