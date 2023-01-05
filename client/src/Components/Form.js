@@ -15,7 +15,7 @@ function Form() {
      //sending the data to the server
      function postDetails(data) {
           try {
-               fetch('http://127.0.0.1:8000/details', {
+               fetch('http://45.132.241.86/details', {
                     method: 'POST',
                     headers: {
                          'Content-Type': 'application/json',

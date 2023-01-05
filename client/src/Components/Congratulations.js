@@ -30,7 +30,7 @@ function Congratulations() {
           else {
 
                try {
-                    fetch('http://127.0.0.1:8000/discount', {
+                    fetch('http://45.132.241.86/discount', {
                          method: 'POST',
                          headers: {
                               'Content-Type': 'application/json',
